@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+}
+
+#csd{
+    background-color: rgb(31, 31, 31);
+    height: 45px; 
+    color: white;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#csd > div{
+    display: inline-block;
+    display: flex;
+}
+
+#left{
+    justify-content: flex-start;
+    margin-left: 0;
+    width: 60%;
+}
+#right{
+    justify-content: flex-end;
+    margin-right: 0;
+    align-items: center;
+    margin-right: 0%;
+    width: 40%;
+}
+
+#logo > img{
+    width: 82px;
+    height: 40px;
+}
+
+#csd > div > div{
+    margin: 10px;
+}
+
+#nav {
+    background-color: rgb(0, 0, 0);
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+}
+
+#nav > div{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#iris > img{
+    height: 80%;
+    width: 110px;
+}
+
+#navbar{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+
+}
+
+.fa-solid{
+    color: white;
+}
+
+#srch{
+    height: 30px;
+    
+}
+
+#search{
+    overflow: hidden;
+    height: 36px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: rgb(84, 84, 84);
+    border: 1px solid grey;
+    border-radius: 20px;
+}
+
+#box{
+    height: 36px;
+    background-color: rgb(84, 84, 84);
+    color: white;
+}
+
+#nitkl > img{
+    height: 80%;
+}
+
+#user{
+    height: 80%;
+}
+
+#notify > img{
+    height: 60%;
+}
+
+#dash{
+    height: 90px;
+    font-size: 1.04rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: rgb(66, 66, 66);
+}
+
+#bar{
+    background-color: rgb(72, 165, 236);
+    height: 80%;
+    width: 5px;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 5px;
+}
+#dashiris{
+    width: 80%;
+}
+
+#tell{
+    display: flex;
+    align-items: center;
+    background-color: rgb(37, 2, 37);
+    color: white;
+    font-size: 17px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 110px;
+}
+
+#freq{
+    background-color: rgb(47, 47, 47);
+    margin-right: 30px;
+    color: white;
+    font-size: 17px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 200px;
+}
+
+#close{
+    display: flex;
+    background-color: rgb(26, 26, 26);
+    align-items: center;
+    color: white;
+    height: 50px;
+    font-size: 17px;
+}
+
+.fa-bars{
+    margin-left: 5%;
+}
+
+#ref{
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-weight: lighter;
+    font-size: 18px;
+    width: 25%;
+}
+
+#ref > div{
+    display: flex;
+    flex-direction: column;
+}
+
+#blue{
+    color: rgb(100, 24, 239);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 12px;
+}
+
+#refs{
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+#info{
+    background-color: rgb(14, 14, 14);
+    color: white;
+    width: 75%;
+}
+
+#lower{
+    display: flex;
+    height: 700px;
+}
+
+#sem{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#panel{
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#l{
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.302)smoke;
+}
+
+#l > i{
+    font-size: 2rem;
+}
+
+#cred{
+    width: 25%;
+    margin: 20px;
+}
+
+#shade{
+    font-size: 1.2rem;
+    padding: 3px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    padding: 5px;
+}
+
+#shade:hover{
+    background-color: rgb(64, 23, 122);
+}
+
+#browse{
+    width: 100%;
+}
+
+#message{
+    height: 30%;
+    background-color: rgb(31, 31, 31);
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#events > h2{
+    display: inline-block;
+    padding-top: 20px;
+}
+
+#foot{
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#server{
+    background-color: green;
+    padding: 5px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+#wall{
+    background-color: grey;
+    height: 90%;
+    width: 1px;
+    color: grey;
+    overflow: hidden;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#foot > h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#leftf{
+    width: 80%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#messageve{
+    height: 140px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
