@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(250, 248, 248);
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#text {
+    font-size: 40px;
+}
+
+#navi {
+    text-align: center;
+}
+
+#navi > h2 {
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#navi > h2:hover{
+    text-decoration: underline;
+}
+
+#cart {
+    text-align: center;
+    margin-top: 100px;
+}
+
+button{
+    background-color: rgb(231, 231, 101);
+    text-align: center;
+    height: 75px;
+    font-size: larger;
+    width: 300px;
+    margin-top: 50px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+button:hover{
+    padding: 8px 3px;
+}
+
+#navr {
+    padding-top: 20px;
+    text-align: center;
+    font-size: larger;
+}
+
+#pay {
+    text-align: center;
+    align-items: center;
+    display:flex;
+    justify-content: space-around;
+}
+
+#im{
+    width: 700px;
+    height: 200px;
+}
+
+button:active{
+    width: 320px;
+    height: 95px;
+}

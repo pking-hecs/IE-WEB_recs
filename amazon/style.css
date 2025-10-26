@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#navbar{
+    height: 60px;
+    background-color:#063731;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+
+
+#logo{
+    width: 113px;
+    background-image: url("log.png");
+    background-size: cover;
+    height: 50px;
+}
+
+#addr > span {
+    color: #CCCCCC;
+}
+
+.fa-location-dot{
+    margin-top: 8px;
+    width: 18px;
+    height: 15px;
+}
+
+#loc{
+    display: flex;
+}
+
+#sel{
+    display: flex;
+    height: 40px;
+    width: 439px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#sel > select{
+    height: 40px;
+    width: 42px;
+    border-radius: 0;
+    border: 0;
+    background-color: #e6e6e6;
+    padding-left: 5px;
+}
+
+
+#sel > input{
+    height: 40px;
+    width: 355px;
+    border-radius: 0;
+    border: 0;
+}
+
+#search{
+    background-color: #febd68;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 42px;
+    height: 100%;
+    justify-content: center;
+    border-radius: 0;
+}
+
+#la > p{
+    display: inline;
+}
+#shop{
+    height: 39px;
+    background-color: #085749;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+}
+
+#shop > div{
+    padding: 8px;
+}
+
+#hero {
+    background-image: url("https://m.media-amazon.com/images/I/71w+qp51UyL._SX3000_.jpg");
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#msg{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+#link{
+    text-decoration: none;
+    color: #007185;
+}
+
+#end {
+    display: flex;
+    justify-content: space-around;
+    background-color: #232f3e;
+    color: white;
+    align-items: center;
+    height: 300px;
+    width: 80%;
+}
+
+#back{
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #053042;
+    color: white;
+}
+
+#bot{
+    display: flex;
+    justify-content: center;
+    background-color: #232f3e;
+    flex-direction: column;
+    align-items: center;
+}
+
+#das{
+    height: 2px;
+    background-color: grey;
+    width: 100%;
+}
+
+#ama > img{
+    height: 100px;
+    width: 200px;
+}
+
+#ama{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#copy{
+    height: 50px;
+    background-color: #131A22;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
