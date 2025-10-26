@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>OS</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="desktop">
+            <input type="checkbox" id="start-menu-toggle" class="hidden-toggle">
+            <input type="checkbox" id="file-explorer-toggle" class="hidden-toggle">
+            <input type="checkbox" id="browser-toggle" class="hidden-toggle" checked>
+            
+            <div id="controls">
+                <button><i class="fa-solid fa-power-off"></i></button>
+                <button id="theme-toggle">
+                    <i class="fa-solid fa-moon" style="display: none;"></i> <i class="fa-solid fa-sun"></i> </button>
+                <button><i class="fa-solid fa-wifi"></i></button>
+                <button><i class="fa-solid fa-volume-high"></i></button>
+            </div>
+
+            <div class="window" id="browser-window">
+                <div class="head">
+                    <span><img id="browse" src="web-browser.png">Browser</span>
+                    <label for="browser-toggle" class="close-btn"><i class="fas fa-times"></i></label>
+                </div>
+                <p>Desktop/</p><br>
+                <div class="window-body">
+                    <p>PLease connect to the Internet and refresh the page...</p>
+                </div>
+            </div>
+            
+            <div class="start">
+                <div class="profile">
+                    <img id="userimg" src="user.png" alt="User Avatar">
+                    <span>User</span>
+                    <img id="shut" src="power.png">
+                </div>
+                <ul>
+                    <li><a href="#"><img id="set" src="settings.png"><br>Settings</a></li>
+                    <li><a href="#"><img id="pic" src="photo.png"><br>Pictures</a></li>
+                    <li><a href="#"><img id="doc" src="word.png"><br>Documents</a></li>
+                    <li><label for="browser-toggle" class="start-menu-link">
+                        <img id="browse" src="web-browser.png"><br>Browser
+                    </label></li>
+                </ul>
+            </div>
+
+            <div class="window" id="files">
+                <div class="head">
+                    <span><i class="fas fa-folder-open"></i>File Explorer</span>
+                    <label for="file-explorer-toggle" class="close-btn"><i class="fas fa-times"></i></label>
+                </div>
+                <p>Desktop/</p><br>
+                <div class="window-body">
+                    <div class="item"><i class="fas fa-file"></i> <br>report.docx</div>
+                    <div class="item"><i class="fas fa-file-image"></i><br> vacation.jpg</div>
+                    <div class="item"><i class="fas fa-file-pdf"></i><br> manual.pdf</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dock">
+            <label for="start-menu-toggle" class="dock-item" id="start-button">
+                <img src="start.png">
+            </label>
+            <label for="file-explorer-toggle" class="dock-item">
+                <img src="drive.png">
+            </label>
+             <label for="browser-toggle" class="dock-item">
+                <img src="web-browser.png" style="height: 40px;"> </label>
+        </div>
+
+        <script>
+            const themeToggle = document.getElementById('theme-toggle');
+            const moonIcon = themeToggle.querySelector('.fa-moon');
+            const sunIcon = themeToggle.querySelector('.fa-sun');
+            
+            themeToggle.addEventListener('click', () => {
+                // Toggle 'light-mode' on the body
+                document.body.classList.toggle('light-mode');
+                
+                // Check if light mode is active
+                let isLightMode = document.body.classList.contains('light-mode');
+                
+                // Show the correct icon
+                moonIcon.style.display = isLightMode ? 'inline' : 'none';
+                sunIcon.style.display = isLightMode ? 'none' : 'inline';
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(pexels-cmonphotography-1809644.jpg);
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    overflow: hidden;
+    /* Default to dark mode text color for start menu, etc. */
+    color: white; 
+}
+
+.hidden-toggle{
+    display: none;
+}
+
+#dock{
+    font-size: 4rem;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+}
+.dock-item > img{
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.dock-item > img:hover {
+    transform: scale(1.1);
+}
+
+.window {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.703);
+    color: white;
+    font-size: 1.2rem;
+    gap: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: all 0.2s ease-out;
+}
+
+#file-explorer-toggle:checked ~ #files {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* --- ADDED THIS RULE --- */
+/* This makes the browser window toggle work */
+#browser-toggle:checked ~ #browser-window {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+/* --- END OF ADDED RULE --- */
+
+
+.head {
+    background: #0d0323;
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close-btn {
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+.close-btn:hover {
+    background-color: #ff5f57;
+    color: white;
+}
+.window-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+}
+.item {
+    width: 30%;
+    text-align: center;
+}
+.item > i{
+    font-size: 3rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.window > p{
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin: 10px;
+    color: rgb(150, 29, 190);
+}
+
+.start {
+    position: absolute;
+    bottom: 65px;
+    left: 10px;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.418);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease-out;
+}
+#start-menu-toggle:checked ~ .start {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.start .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+#userimg{
+    width: 50px;
+    border-radius: 50%;
+}
+#shut{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.start .profile img {
+    border-radius: 50%;
+    cursor: pointer;
+}
+.start ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.start ul a, .start-menu-link {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer; /* Added for label */
+}
+.start ul a:hover, .start-menu-link:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(0, 128, 255);
+}
+.start ul a img {
+    margin-right: 0;
+    width: 60px;
+}
+/* Added for label */
+.start-menu-link img { 
+    margin-right: 0;
+    width: 60px;
+}
+
+
+#browse{
+    margin-right: 0;
+    width: 60px;
+}
+
+#controls{
+    background-color: rgba(0, 0, 0, 0.418);
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+#controls > button{
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border: 0px;
+}
+
+/* --- 
+NEW STYLES BELOW 
+--- */
+
+/* --- Day/Night Mode --- */
+
+/* Default Icon Colors (Dark Mode) */
+#controls i {
+    color: #ffffff;
+    font-size: 1rem; /* Added for consistency */
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    color: #333; /* Default text color for light mode */
+}
+
+body.light-mode #dock {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .window {
+    background-color: rgba(245, 245, 245, 0.85);
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body.light-mode .head {
+    background: #dcdcdc;
+    color: #333;
+}
+
+body.light-mode .window > p {
+    color: #555;
+    border: 2px solid #ccc;
+}
+
+body.light-mode .start {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    color: #333;
+}
+
+body.light-mode .start .profile {
+    color: #333;
+    border-bottom: 1px solid #aaa;
+}
+
+body.light-mode .start ul a, 
+body.light-mode .start-menu-link {
+    color: #333;
+}
+
+body.light-mode .start ul a:hover,
+body.light-mode .start-menu-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #0078d4; /* Windows-like blue */
+}
+
+body.light-mode #controls {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+body.light-mode #controls i {
+    color: #333;
+}
